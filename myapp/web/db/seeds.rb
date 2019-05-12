@@ -4,6 +4,8 @@ User.create(
   password: "foobar",
   password_confirmation: "foobar",
   admin: true,
+  activated: true,
+  activated_at: Time.zone.now.to_s(:db),
 )
 
 99.times do |n|
@@ -15,5 +17,7 @@ User.create(
     email: email,
     password: password,
     password_confirmation: password,
+    activated: true,
+    activated_at: Time.zone.now.to_s(:db),
   )
 end
